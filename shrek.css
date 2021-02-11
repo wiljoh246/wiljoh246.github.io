@@ -1,0 +1,23 @@
+
+body{
+
+    background-color:white;
+}
+
+#shrek{
+    visibility: hidden;
+    
+    
+    }
+
+@media only screen and (max-width: 800px){
+body{
+
+    background-color:white;
+}
+    #shrek{
+visibility: visible;
+}
+
+
+}
