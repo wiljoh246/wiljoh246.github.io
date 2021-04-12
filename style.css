@@ -86,7 +86,10 @@
   p {
     margin-bottom: 10px;
   }
-  
+  .nyheter a{
+    text-decoration: none;
+  }  
+
   img {
     height: 400px;
     width: 700px;
