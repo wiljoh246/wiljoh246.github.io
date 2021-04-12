@@ -1,28 +1,374 @@
-body {
-margin: 0;
-}
-
-.topnav {
-    overflow: hidden;
-    background-color: black;
-    position: sticky;
-    top: 0;
-}
-.topnav a {
-    margin-right: 0%;
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans';
+  }
+  
+  nav {
+    display: grid;
+    grid-template-areas: 'navlink konton';
+    width: 60%;
+    margin: auto;
+    margin-top: 3%;
+    grid-gap: 40px;
+    color: black;
+  }
+  .navlink a{
+      color: black;
+      text-decoration: none;
+  }
+  
+  .navlink li {
+    list-style: none;
+    display: inline;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .konton a{
+    color: black;
     text-decoration: none;
-}
-.topnav a:hover {
-    background-color: #4a4843;
-    color:  white;
-}
+  }
+  
+  li:hover {
+    font-weight: 900;
+  }
+  
+  i {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  i:hover {
+    transform: scale(1.3);
+  }
+  
+  .header {
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 2%;
+  }
+  
+  h1 {
+    font-family: 'Merriweather';
+    font-size: 50px;
+  }
+  
+  h2,h4,h5 {
+    font-weight: 100;
+  }
+  
+  hr {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+  }
+  .innehåll {
+    display: grid;
+    grid-template-areas: 'vänsterin högerin';
+    width: 60%;
+    margin: auto;
+    grid-gap: 50px;
+    text-align: left;
+  }
+  
+  .förstain, .andrain {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  .andrain h3,
+  p {
+    margin-bottom: 10px;
+  }
+  
+  img {
+    height: 400px;
+    width: 700px;
+  }
+  
+  .högerin img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+  }
+  
+  .personbeskrivning {
+    font-style: italic;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Allura';
+  }
+  
+  .nyheter {
+    margin-top: 10%;
+    border: 1px solid black;
+    padding: 25px 10px 25px 10px;
+    text-align: center;
+    grid-area: nyheter;
+  }
+  
+  h5 {
+    margin-bottom: 10%;
+  }
+  
+  input[type='email'] {
+    padding: 10px 20px 10px 20px;
+    outline: none;
+  }
+  
+  ::placeholder {
+    text-align: center;
+  }
+  
+  .subbutton {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 70px 15px 70px;
+    margin-top: 5%;
+  }
+  
+  .subbutton:hover {
+    background-color: #a9a9a9;
+  }
+  
+  .search {
+    margin-top: 10%;
+    text-align: center;
+    grid-area: search;
+  }
+  
+  .search h5 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+  }
+  
+  input[type='text'] {
+    padding: 5px;
+    width: 80%;
+    outline: none;
+  }
+  
+  .searchbutton {
+    float: right;
+    padding: 5px 8px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 15px;
+  }
+  
+  .searchbutton:hover {
+    background-color: #a9a9a9;
+  }
+  
+  .bigarticle {
+    margin-top: 10%;
+    text-align: center;
+    grid-area: bigarticle;
+  }
+  
+  .bigarticle h5 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+  }
+  
+  .bigarticle img {
+    height: 240px;
+    width: 220px;
+    border-radius: 0 !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+  }
+  
+  .caption {
+    font-family: 'Allura';
+    font-style: italic;
+  }
+  
+  footer {
+    margin-top: 3%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+  }
+  
+  .förstain {
+    grid-area: förstain;
+  }
+  
+  .andrain {
+    grid-area: andrain;
+  }
+  
+  .pfp {
+    grid-area: pfp;
+  }
+  
+  @media (max-width: 1300px) {
+    nav {
+      grid-template-areas:
+        'navlink'
+        'accounts';
+      text-align: center;
+    }
+    .innehåll {
+      grid-template-areas:
+        'vänsterin'
+        'högerin';
+      width: 70%;
+      margin: auto;
+    }
+    .blogg{
+      text-align: center;
+    }
+    .blogg img{
+      width: 450px;
+      height: 300px;
+      display: block;
+    }
+    .pfp2jpg img{
+      margin-left: 30%;
+      margin-right: auto;
+    }
+    hr {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2%;
+    }
+    .högerin {
+      display: grid;
+      grid-template-areas:
+        'pfp' 'nyheter'
+        'search' 'topics';
+      grid-gap: 40px;
+    }
+    .nyheter {
+      margin-top: 0;
+    }
+    .bigarticle {
+      display: none;
+    }
+    .topics {
+      margin-top: 30px;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    nav li {
+      display: block;
+    }
+    .innehåll {
+      grid-template-areas:
+        'vänsterin'
+        'högerin';
+      grid-gap: 40px;
+      width: 80%;
+      margin: auto;
+    }
+    .blog1, .blog2, .blog3{
+      display: block;
+      margin-left: -50px;
+      margin-right: auto;
+    }
 
-.topnav a.active{
-background-color:orange;
-
+    hr {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2%;
+    }
+    .pfp2jpg img{
+      margin-left: 10%;
+      margin-right: auto;
+    }
+    .pfp2jpg{
+      width: 70%;
+    }
+    .vänsterin img {
+      height: 300px;
+      width: 400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .blogg img{
+      height: 200px;
+      width: 300px;
+      display: block;
+      margin-left: 0px;
+      margin-right: auto;
+    }
+    .högerin {
+      display: grid;
+      grid-template-areas:
+        'pfp'
+        'nyheter'
+        'search'
+        'topics';
+      width: 50%;
+      margin-left: 80px;
+    }
+    .nyheter,
+    .topics,
+    .search {
+      margin-top: 3%;
+    }
+  }
+  .javis{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #age{
+    width: 80%;
+  }
+  .toppen{
+    color: black;
+    text-decoration: none;
+    margin-left: 49%;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  .contacts{
+    width: 60%;
+    margin: auto;
+    text-align: left;
+  }
+  .blogg {
+  width: 35%;
+  margin: auto;
+  text-align: left;
+  display: grid;
+  grid-template-areas: 'blogg';
 }
+  .pfp2{
+    width: 40%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pfp2jpg img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 43%;
+    margin-right: auto;
+  }
